@@ -45,7 +45,7 @@ namespace double_linked_list
             nm = Console.ReadLine();
             Node newNode = new Node();
             newNode.noMhs = nim;
-            newNode.name = nm;
+            newNode.name = nm; 
 
             //check if the list empty
             if (START == null || nim <= START.noMhs)
@@ -62,12 +62,23 @@ namespace double_linked_list
                 START = newNode;
                 return;
             }
-
+            //if the node  is to be inserted at between two node
+            Node previous, current;
+            for (current = previous = START; 
+                current != null && nim >= current.noMhs;
+                previous = current, current = current.next)
+            {
+                if (nim == current.noMhs)
+                {
+                    Console.WriteLine("\nDuplicate roll number not allowed");
+                    return ;
+                }
+            }
 
         }
     }
 
-    static void Main(string[] args)
+        static void Main(string[] args)
         {
         }
     
