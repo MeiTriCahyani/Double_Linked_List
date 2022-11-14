@@ -23,9 +23,35 @@ namespace double_linked_list
         public Node prev;
     }
 
-    
+    class DoubleLinkedList
+    {
+        Node START;
 
-        static void Main(string[] args)
+        //constructor
+
+        public DoubleLinkedList()
+        {
+            START = null;
+
+        }
+
+        public void addNode()
+        {
+            int nim;
+            string nm;
+            Console.Write(" \n Enter the roll nu mber of student:");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Enter the name of student:");
+            nm = Console.ReadLine();
+            Node newNode = new Node();
+            newNode.noMhs = nim;
+            newNode.name = nm;
+
+            
+        }
+    }
+
+    static void Main(string[] args)
         {
         }
     
