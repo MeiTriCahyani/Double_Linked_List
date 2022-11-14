@@ -184,6 +184,35 @@ namespace double_linked_list
                     Console.WriteLine("6. Exit\n");
                     Console.WriteLine("Enter your choice (1-6):");
                     char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNode();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is Empety");
+                                    break;
+                                }
+                                Console.WriteLine("\n Enter the roll number of the student" + " whose record is to be deleted:");
+                                int rollNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(rollNo) == false)
+                                    Console.WriteLine(" Record not found");
+                                else
+                                    Console.WriteLine(" Record with roll number" + rollNo + "deleted\n");
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.ascending();
+                            }
+                            break;
+                    }
                 }
             }
         }
