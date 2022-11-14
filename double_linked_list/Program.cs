@@ -156,8 +156,11 @@ namespace double_linked_list
                 Console.WriteLine("\nRecord in the descending order of" + "roll number are\n");
                 Node currentNode;
                 for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+                {}
+                while(currentNode != null)
                 {
-
+                    Console.WriteLine(currentNode.noMhs + "" + currentNode.name + "\n");
+                     currentNode = currentNode.prev;
                 }
             }
         }
