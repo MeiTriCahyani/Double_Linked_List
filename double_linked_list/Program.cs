@@ -249,6 +249,10 @@ namespace double_linked_list
                     }
 
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the values entered");
+                }
             }
         }
     }
